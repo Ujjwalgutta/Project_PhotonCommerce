@@ -22,8 +22,7 @@ pip install setup.py
 
 ## Data Pipeline
 The workflow is as follows:
- <img src="images/model_design.PNG" width="500" height="500">
-![Model Design](https://github.com/Ujjwalgutta/iR-Lens/tree/master/images/model_design.PNG) 
+ <img src="images/model_design.PNG">
 
 ### Training
 Once the package setup is completed, model can be trained by running `train_spacy.py` script.
