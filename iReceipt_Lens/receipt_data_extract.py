@@ -12,11 +12,10 @@ import pandas as pd
 import numpy as np
 import re
 import cv2
-#pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
 
 #Get the Total company names for tesseract performance Analysis
-def get_company_names_tesseract(image_file_dir = "receipt_data/input_images/", text_file_dir = "receipt_data/input_text/"):
+def get_company_names_tesseract(image_file_dir = "../data/preprocessed/input_images/", text_file_dir = "../data/preprocessed/input_text/"):
     train_data_company = []
     image_list = os.listdir(image_file_dir)
     file_list = os.listdir(text_file_dir)
@@ -63,7 +62,7 @@ def get_company_names_tesseract(image_file_dir = "receipt_data/input_images/", t
 
 
 #Get the training data for Spacy using Tesseract
-def training_data_tesseract(image_file_dir = "receipt_data/input_images/", text_file_dir = "receipt_data/input_text/"):
+def training_data_tesseract(image_file_dir = "../data/preprocessed/input_images/", text_file_dir = "../data/preprocessed/input_text/"):
     print("This is a Program to preprocess the raw text and load the Tesseract training data \n")
 	train_data_resized = []
     image_list = os.listdir(image_file_dir)
@@ -102,7 +101,7 @@ def training_data_tesseract(image_file_dir = "receipt_data/input_images/", text_
     return train_data_resized
 
 #Get the training data for Spacy using Textract
-def training_data_textract(image_file_dir = "receipt_data/input_images/", text_file_dir = "receipt_data/input_text/"):
+def training_data_textract(image_file_dir = "../data/preprocessed/input_images/", text_file_dir = "../data/preprocessed/input_text/"):
 	print("This is a Program to preprocess the raw text and load the Textract training data \n")
 	train_data_textract = []
 	image_list = os.listdir(image_file_dir)
