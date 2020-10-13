@@ -10,8 +10,8 @@ import pytesseract
 import spacy
 
 
-tesseract_model_dir_best = 'blank_model_val/epoch_67'
-textract_model_dir_best = 'textract_model_blank/epoch_65'
+tesseract_model_dir_best = '../models/tesseract_model_blank/epoch_67'
+textract_model_dir_best = '../models/textract_model_blank/epoch_65'
 
 
 def predict_tesseract(file_name, model_dir = tesseract_model_dir_best):
