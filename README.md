@@ -20,6 +20,10 @@ pip install -r requirements.txt
 pip install setup.py
 ```
 
+## Data Pipeline
+The workflow is as follows:
+![Model Design](https://github.com/Ujjwalgutta/iR-Lens/tree/master/images/model_design.PNG) 
+
 ### Training
 Once the package setup is completed, model can be trained by running `train_spacy.py` script.
 ```
@@ -27,69 +31,11 @@ python train_spacy.py
 ```
 After training is completed the model will be saved to the folder `models/new_model`
 
-### Inference
-Predefined Entities can be extracted from the documents using two Optical Character Recognition methods.
+### Run Inference
+Predefined Entities can be extracted from the documents using two Optical Character Recognition methods.\
 To use 'Google Tesseract' the function `iReceipt_Lens.predict.predict_tesseract` should be called.\
 To use 'Amazon Textract' the function `iReceipt_Lens.predict.predict_textract` should be called.
 
-
-## Build Environment
-- Include instructions of how to launch scripts in the build subfolder
-- Build scripts can include shell scripts or python setup.py files
-- The purpose of these scripts is to build a standalone environment, for running the code in this repository
-- The environment can be for local use, or for use in a cloud environment
-- If using for a cloud environment, commands could include CLI tools from a cloud provider (i.e. gsutil from Google Cloud Platform)
-```
-# Example
-
-# Step 1
-# Step 2
-```
-
-## Configs
-- We recommond using either .yaml or .txt for your config files, not .json
-- **DO NOT STORE CREDENTIALS IN THE CONFIG DIRECTORY!!**
-- If credentials are needed, use environment variables or HashiCorp's [Vault](https://www.vaultproject.io/)
-
-
-## Test
-- Include instructions for how to run all tests after the software is installed
-```
-# Example
-
-# Step 1
-# Step 2
-```
-
-## Run Inference
-- Include instructions on how to run inference
-- i.e. image classification on a single image for a CNN deep learning project
-```
-# Example
-
-# Step 1
-# Step 2
-```
-
-## Build Model
-- Include instructions of how to build the model
-- This can be done either locally or on the cloud
-```
-# Example
-
-# Step 1
-# Step 2
-```
-
-## Serve Model
-- Include instructions of how to set up a REST or RPC endpoint
-- This is for running remote inference via a custom model
-```
-# Example
-
-# Step 1
-# Step 2
-```
 
 ## Analysis
 - Include some form of EDA (exploratory data analysis)
