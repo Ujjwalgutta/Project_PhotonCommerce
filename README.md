@@ -14,26 +14,24 @@ repo_name=iR-Lens # URL of the project repository
 username=Ujjwalgutta # Username 
 git clone https://github.com/$username/$repo_name
 ```
-Local Setup
+Installation
 ```
 pip install -r requirements.txt
 pip install setup.py
 ```
 
-## Requisites
-
-- List all packages and software needed to build the environment
-- This could include cloud command line tools (i.e. gsutil), package managers (i.e. conda), etc.
-
-#### Dependencies
-
-- [Streamlit](streamlit.io)
-
-#### Installation
-To install the package above, pleae run:
-```shell
-pip install -r requiremnts
+### Training
+Once the package setup is completed, model can be trained by running `train_spacy.py` script.
 ```
+python train_spacy.py
+```
+After training is completed the model will be saved to the folder `models/new_model`
+
+### Inference
+Predefined Entities can be extracted from the documents using two Optical Character Recognition methods.
+To use 'Google Tesseract' the function `iReceipt_Lens.predict.predict_tesseract` should be called.\
+To use 'Amazon Textract' the function `iReceipt_Lens.predict.predict_textract` should be called.
+
 
 ## Build Environment
 - Include instructions of how to launch scripts in the build subfolder
