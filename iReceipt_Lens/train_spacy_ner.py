@@ -19,7 +19,7 @@ from spacy.scorer import Scorer
 import pandas as pd
 
 # Train new NER model
-def train_new_NER(model=None, output_dir=textract_model_dir, n_iter=100):
+def train_new_NER(model=None, output_dir='models/', n_iter=100):
     #Load the model, set up the pipeline and train the entity recognizer.
     if model is not None:
         nlp = spacy.load(model)  # load existing spaCy model
@@ -63,7 +63,7 @@ def train_new_NER(model=None, output_dir=textract_model_dir, n_iter=100):
                     losses=losses,
                 )
             print("Losses", losses)
-            epoch_path = 'model_blank/epoch_' + str(itn)
+            epoch_path = output_dir + 'model_blank/epoch_' + str(itn)
             nlp.to_disk(epoch_path)
             if val is not None:
                 score_prf = evaluate_model(nlp,val)
@@ -72,9 +72,9 @@ def train_new_NER(model=None, output_dir=textract_model_dir, n_iter=100):
 	data = pd.DataFrame(history_blank)
 	data.to_csv('history_blank_model.csv',index=False)
 	return nlp
-
+        
 ## Update existing spacy model and store into a folder
-def update_model(model='en_core_web_sm', output_dir=updated_model_dir_large, n_iter=100):
+def update_model(model='en_core_web_sm', output_dir='models/', n_iter=100):
    #Load the model, set up the pipeline and train the entity recognizer.
     if model is not None:
         nlp = spacy.load(model)  # load existing spaCy model
@@ -126,7 +126,7 @@ def update_model(model='en_core_web_sm', output_dir=updated_model_dir_large, n_i
                 )
 			
 			print("Losses", losses)
-            epoch_path = 'model_pretrained/epoch_' + str(itn)
+            epoch_path = output_dir + 'model_pretrained/epoch_' + str(itn)
             nlp.to_disk(epoch_path)  # Make sure you don't use the SpaCy's large model because each model occupies 786 MB of data.
             if val is not None:
                 score_prf = evaluate_model(nlp,val)
@@ -136,4 +136,4 @@ def update_model(model='en_core_web_sm', output_dir=updated_model_dir_large, n_i
 	data.to_csv('history_pretrained_model.csv',index=False)
 	save_model(nlp, output_dir)
 	return nlp
-	
+        	
