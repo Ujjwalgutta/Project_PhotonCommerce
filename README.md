@@ -15,10 +15,11 @@ username=Ujjwalgutta # Username
 git clone https://github.com/$username/$repo_name
 ```
 Local Setup
-'''
+```
 pip install -r requirements.txt
 pip install setup.py
-'''
+```
+
 ## Requisites
 
 - List all packages and software needed to build the environment
