@@ -1,4 +1,13 @@
 # To install these Python dependencies, please type:
 # pip install -r requirements.txt
-
+cupy==7.8.0
+pytesseract
+numpy
+pandas
+spacy
 streamlit
+regex
+boto3
+pickle
+opencv-python
+scikit-learn
