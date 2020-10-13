@@ -11,9 +11,9 @@ import os
 import pytesseract
 import re
 import numpy as np
-#pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
-start = time.time()
-def evaluate_simple_parser(file_name = 'receipt_parser.pickle'):
+
+def evaluate_simple_parser(file_name = 'train_data/train_tesseract.pickle'):
+    start = time.time()
     keys = ['company','date','total']
     y_true_name = []
     y_pred_name = []
@@ -27,7 +27,7 @@ def evaluate_simple_parser(file_name = 'receipt_parser.pickle'):
     for j in range(len(receipt_parser_simple)):
         a,b = receipt_parser_simple[j]
         file_name = a[:-4] + '.txt'
-        with open('receipt_data/input_text/' + file_name) as file_data:
+        with open('../data/preprocessed/input_text/' + file_name) as file_data:
             my_dict ={}
             lines = file_data.readlines()
             if(len(lines)<6):
@@ -52,11 +52,6 @@ def evaluate_simple_parser(file_name = 'receipt_parser.pickle'):
         y_true_total.append(my_dict['total'])
         y_true_name.append(my_dict['company'])
         y_true_date.append(my_dict['date'])
+    end = time.time()
+    print("Time taken: ",str(end-start))
     return y_true_date,y_true_name,y_true_total,y_pred_date,y_pred_total,y_pred_name
-            
-y_true_d,y_true_n,y_true_t,y_pred_d,y_pred_t,y_pred_n = evaluate_simple_parser()
-end = time.time()
-print("Time taken: ",str(end-start))
-
-
-    
