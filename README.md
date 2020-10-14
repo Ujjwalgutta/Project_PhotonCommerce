@@ -36,7 +36,8 @@ Predefined Entities can be extracted from the documents using two Optical Charac
 To use 'Google Tesseract' the function `iReceipt_Lens.predict.predict_tesseract` should be called.\
 To use 'Amazon Textract' the function `iReceipt_Lens.predict.predict_textract` should be called.
 
-
+## Demo
+![Alt Text](demo/demo.gif)
 ## Analysis
 - Include some form of EDA (exploratory data analysis)
 - And/or include benchmarking of the model and results
