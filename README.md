@@ -39,11 +39,8 @@ To use 'Amazon Textract' the function `iReceipt_Lens.predict.predict_textract` s
 ## Demo
 ![Alt Text](demo/demo.gif)
 ## Analysis
-- Include some form of EDA (exploratory data analysis)
-- And/or include benchmarking of the model and results
-```
-# Example
+Comparative Analysis of F1-Score across all the models.
+![Alt Text](images/F1_score.PNG)
 
-# Step 1
-# Step 2
-```
+Company Names identified using different OCR models.
+![Alt Text](images/Company_names.PNG)
