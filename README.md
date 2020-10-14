@@ -38,6 +38,10 @@ To use 'Amazon Textract' the function `iReceipt_Lens.predict.predict_textract` s
 
 ## Demo
 ![Alt Text](demo/demo.gif)
+
+## Results
+![Alt Text](images/Final_Results.PNG)
+
 ## Analysis
 Comparative Analysis of F1-Score across all the models.
 ![Alt Text](images/F1_score.PNG)
