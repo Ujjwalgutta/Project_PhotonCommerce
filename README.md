@@ -40,6 +40,9 @@ To use 'Amazon Textract' the function `iReceipt_Lens.predict.predict_textract` s
 ![Alt Text](demo/demo.gif)
 
 ## Results
+List of Precision and Recall Values for different methods implemented.\
+'Amazon Textract + Named Entity Recognition' method outperformed the remaining methods by a noticable margin.\
+
 ![Alt Text](images/Final_Results.PNG)
 
 ## Analysis
