@@ -7,6 +7,21 @@ iR Lens is an automated Receipt/Invoice Parser which extracts predefined entitie
 - Track your monthly expenses without having to search for your receipts in a sea of documents. 
 - Document Understanding using AI is a trending technology.
 
+## Usage
+```
+├── iR-Lens
+│   ├── iReceipt_Lens
+│   │   ├── receipt_data_extract.py     # Script to extract SpaCy's training data from documents using different models. 
+│   │   ├── generate_training_data.py   # Script to store this extracted training data into the required file format.
+│   │   ├── simple_receipt_parser.py    # Implementation of Simple Regular Expression Parser using Template Matching.
+│   │   ├── utils.py                    # Helper functions to evaluate and store trained SpaCy models. 
+|   |   ├── train_spacy_ner.py
+│   │   ├── models                      # Pretrained SpaCy models using different OCR techniques.
+│   │   │   ├── epoch_65                # Directory where the trained Textract model with the best validation metrics is stored
+│   │   │   ├── epoch_67                # Directory where the trained Tesseract model with the best validation accuracy is stored
+
+```
+
 ## Setup
 Clone repository
 ```
@@ -34,7 +49,7 @@ The workflow is as follows:
 Once the package setup is completed, model can be trained by running `train_spacy.py` script.
 ```
 python train_spacy.py
-```
+``` 
 After training is completed the model will be saved to the folder `models/new_model`
 
 ### Run Inference
