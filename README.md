@@ -11,7 +11,7 @@ iR Lens is an automated Receipt/Invoice Parser which extracts predefined entitie
 ```
 ├── iR-Lens
 │   ├── iReceipt_Lens
-│   │   ├── receipt_data_extract.py     # Script to extract SpaCy's training data from documents using different models. 
+│   │   ├── receipt_data_extract.py     # Script to extract SpaCy's training data from documents using different OCR techniques and RegEx. 
 │   │   ├── generate_training_data.py   # Script to store this extracted training data into the required file format.
 │   │   ├── simple_receipt_parser.py    # Implementation of Simple Regular Expression Parser using Template Matching.
 │   │   ├── utils.py                    # Helper functions to evaluate and store trained SpaCy models. 
