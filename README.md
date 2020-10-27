@@ -19,6 +19,12 @@ Installation
 pip install -r requirements.txt
 pip install setup.py
 ```
+Run the Streamlit Aapp
+```
+pip install pipenv                
+pipenv shell                  # This creates a virtual conda enviroment to run the app on streamlit
+python streamlit run app.py
+```
 
 ## Data Pipeline
 The workflow is as follows:
@@ -41,7 +47,7 @@ To use 'Amazon Textract' the function `iReceipt_Lens.predict.predict_textract` s
 
 ## Results
 List of Precision and Recall Values for different methods implemented.\
-'Amazon Textract + Named Entity Recognition' method outperformed the remaining methods by a noticable margin.\
+'Amazon Textract + Named Entity Recognition' method outperformed the remaining methods by a noticable margin.
 
 ![Alt Text](images/Final_Results.PNG)
 
@@ -51,3 +57,13 @@ Comparative Analysis of F1-Score across all the models.
 
 Company Names identified using different OCR models.
 ![Alt Text](images/Company_names.PNG)
+
+## Conclusion
+Textract outperformed Tesseract due to following reasons:
+- Textract uses deep learning based image processing techniques like Contour Detection, Perspective Warping to eliminate several scanning artifacts. 
+- Textract is Template Agnostic and can recognize text in ordered form(multiple columns,tables)
+- Textract can recognize handwritten text. Thus, can help eliminate any handwritten scribblings on the documents. 
+
+Regular Expression Parser using Template Matching has low metric scores because:
+- Templates are brittle and layouts can be very sensitive to excessive meta data.
+- It is not feasible to create 100s of layouts for all the document types. 
