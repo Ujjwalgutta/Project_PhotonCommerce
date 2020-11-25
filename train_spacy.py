@@ -119,5 +119,5 @@ if __name__ == "__main__":
         train_data_tex[k] = x,y
     training_data,testing_data = train_test_split(train_data_tex,test_size = 0.15, random_state = 42)
     test,val = train_test_split(testing_data, test_size = 0.5, random_state = 42)
-    tex_nlp = train_new_model(output_dir = textract_model_dir_best)
+    tex_nlp = train_new_NER(output_dir = textract_model_dir_best)
     
